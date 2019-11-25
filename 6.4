@@ -1,0 +1,63 @@
+package com.company;
+
+public class Point {
+    /*
+        4
+        Design a class named Point
+            properties
+            - coordinateX
+            - coordinateY
+
+            methods
+            - distance()  (from 0:0 coordinat)
+            - distance(Point point) ( Overloaded method to get the distance between 2 points )
+
+     */
+    //region Properties
+
+    private int coordinateX;
+    private int coordinateY;
+
+    //endregion
+
+    //region Methods
+    public double distanceFrom() {
+        // from 0:0
+        double distance = Math.sqrt(Math.pow(this.coordinateX, 2) + Math.pow(this.coordinateY, 2));
+        return distance;
+    }
+
+    public double distanceFrom(double x, double y) {
+        // distance from point x:y
+        double distance = 0;
+        if (x > 0 && y > 0) {
+            distance = Math.sqrt(Math.pow(Math.abs(x - coordinateX), 2) + Math.pow(Math.abs(y - coordinateY), 2));
+        }
+        return distance;
+    }
+    //endregion
+
+    //region Getters and Setters
+
+    public int getCoordinateX() {
+        return coordinateX;
+    }
+
+    public void setCoordinateX(int coordinateX) {
+        if (coordinateX > 0) {
+            this.coordinateX = coordinateX;
+        }
+
+    }
+
+    public int getCoordinateY() {
+        return coordinateY;
+    }
+
+    public void setCoordinateY(int coordinateY) {
+        if (coordinateY > 0) {
+            this.coordinateY = coordinateY;
+        }
+    }
+    //endregion
+}
