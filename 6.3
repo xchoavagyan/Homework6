@@ -1,0 +1,83 @@
+package com.company;
+
+public class Triangle {
+    /*
+        3
+        Design a class named Triangle
+            properties
+            - sideA
+            - sideB
+            - sideC
+
+            methods
+            - calculatePerimeter
+            - calculateArea
+     */
+    // region Properties
+    private int sideA;
+    private int sideB;
+    private int sideC;
+    //endregion
+
+    // region Methods
+
+    public double calculatePerimeter(){
+        double perimeter = 0;
+        if (isValidTriangle()){
+            perimeter = this.sideA + this.sideB + this.sideC;
+        }
+
+        return perimeter;
+    }
+    public double calculateArea(){
+        double p = calculatePerimeter() / 2;
+        double area = 1;
+        if (isValidTriangle()){
+            area = Math.sqrt(p * (p - this.sideA) * (p - this.sideB) * (p - sideC));
+        }
+        return area;
+    }
+    public boolean isValidTriangle(){
+        boolean isValid = false;
+        if (sideA+sideB>sideC&& sideB+sideC>sideA&&sideC+sideA>sideB){
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    //endregion
+
+    // region Getters and Setters
+    public int getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(int sideA) {
+        if (sideA > 0) {
+            this.sideA = sideA;
+        }
+
+    }
+
+    public int getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(int sideB) {
+        if (sideB > 0) {
+            this.sideB = sideB;
+        }
+    }
+
+    public int getSideC() {
+        return sideC;
+    }
+
+    public void setSideC(int sideC) {
+        if (sideC > 0) {
+            this.sideC = sideC;
+        }
+    }
+    //endregion
+
+}
