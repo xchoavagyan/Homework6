@@ -1,0 +1,58 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        Movie nominatedMovie1 = new Movie();
+        nominatedMovie1.setTitle("Black Panther");
+        Movie nominatedMovie2 = new Movie();
+        nominatedMovie2.setTitle("Bohemian Rhapsody");
+        Movie nominatedMovie3 = new Movie();
+        nominatedMovie3.setTitle("Green Book");
+        Movie nominatedMovie4 = new Movie();
+        nominatedMovie4.setTitle("Roma");
+        Movie nominatedMovie5 = new Movie();
+        nominatedMovie5.setTitle("A Star Is Born");
+        Movie nominatedMovie6 = new Movie();
+        nominatedMovie6.setTitle("Vice");
+        Movie nominatedMovie7 = new Movie();
+        nominatedMovie7.setTitle("The Favourite");
+        Movie nominatedMovie8 = new Movie();
+        nominatedMovie8.setTitle("Joker");
+        Movie nominatedMovie9 = new Movie();
+        nominatedMovie9.setTitle("Gemini Man");
+        Movie nominatedMovie10 = new Movie();
+        nominatedMovie10.setTitle("Lion King");
+        Movie[] movies = new Movie[10];
+        movies[0] = nominatedMovie1;
+        movies[1] = nominatedMovie2;
+        movies[2] = nominatedMovie3;
+        movies[3] = nominatedMovie4;
+        movies[4] = nominatedMovie5;
+        movies[5] = nominatedMovie6;
+        movies[6] = nominatedMovie7;
+        movies[7] = nominatedMovie8;
+        movies[8] = nominatedMovie9;
+        movies[9] = nominatedMovie10;
+
+        for (int i = 0; i < movies.length; i++) {
+            movies[i].setRating(random.nextInt(10) + 1);
+        }
+
+        int maxRating = movies[0].getRating();
+        for (int i = 0; i < 10; i++) {
+            if (movies[i].getRating() >= maxRating) {
+                maxRating = movies[i].getRating();
+            }
+        }
+
+        for (int i = 0; i < movies.length; i++) {
+            if (maxRating == movies[i].getRating()) {
+                System.out.println("Օscar gets the movie : " + movies[i].getTitle());
+            }
+        }
+    }
+}
