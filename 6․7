@@ -1,0 +1,87 @@
+package com.company;
+
+public class CurrencyConverter {
+    /*
+        7
+        Design a class named CurrencyConverter
+            methods
+
+            - convertDollarToEuro
+            - convertDollarToDram
+            - convertDollarToRuble
+
+            - convertEuroToDollar
+            - convertEuroToDram
+            - convertEuroToRuble
+
+            - convertDramToDollar
+            - convertDramToEuro
+            - convertDramToRuble
+
+            - convertRubleToDollar
+            - convertRubleToEuro
+            - convertRubleToRuble
+     */
+    // region Methods
+    public double convertDollarToEuro(double dollar) {
+        double convert = dollar * 0.91;
+        return convert;
+    }
+
+    public double convertDollarToDram(double dollar) {
+        double convert = dollar * 476.6;
+        return convert;
+    }
+
+    public double convertDollarToRuble(double dollar) {
+        double convert = dollar * 64.0;
+        return convert;
+    }
+
+    public double convertEuroToDollar(double euro) {
+        double convert = euro * 1.11;
+        return convert;
+    }
+
+    public double convertEuroToDram(double euro) {
+        double convert = euro * 524.91;
+        return convert;
+    }
+
+    public double convertEuroToRuble(double euro) {
+        double convert = euro * 70.48;
+        return convert;
+    }
+
+    public double convertRubleToDollar(double ruble) {
+        double convert = ruble * 0.016;
+        return convert;
+    }
+
+    public double convertRubleToEuro(double ruble) {
+        double convert = ruble * 0.014;
+        return convert;
+    }
+
+    public double convertRubleToDram(double ruble) {
+        double convert = ruble * 7.44;
+        return convert;
+    }
+
+    public double convertDramToDollar(double dram) {
+        double convert = dram * 0.0021;
+        return convert;
+    }
+
+    public double convertDramToEuro(double dram) {
+        double convert = dram * 0.0019;
+        return convert;
+    }
+
+    public double convertDramToRuble(double dram) {
+        double convert = dram * 0.13;
+        return convert;
+    }
+    //endregion
+
+}
