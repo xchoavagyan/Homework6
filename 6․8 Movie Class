@@ -1,0 +1,40 @@
+package com.company;
+
+public class Movie {
+    /*
+        8
+        Design a class named Movie
+            properties
+                - title
+                - rating
+
+        Create 10 movie objects in main, give them titles and random ratings in range (0 - 10) and store them in array;
+        get the best rated movie/movies from array and display the title.
+
+     */
+
+    //region Properties
+
+    private String title;
+    private int rating;
+
+    //endregion
+
+    //region Getters and Setters
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+    //endregion
+}
