@@ -1,0 +1,22 @@
+package com.company;
+
+public class DistanceConverter {
+    /*
+        6
+        Design a class named DistanceConverter
+            methods
+            - convertMetersToMiles
+            - convertMilesToMeters
+     */
+
+    // region Methods
+    public double convertMetersToMiles(double meter) {
+        double miles = meter * 0.00062;
+        return miles;
+    }
+    public double convertMilesToMeters(double mile) {
+        double meter = mile * 1609.34;
+        return meter;
+    }
+    //endregion
+}
